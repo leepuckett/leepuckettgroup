@@ -86,6 +86,7 @@ body {
 /*************************
  Media Queries
  *************************/
+
 @import "compass/css3";
 
 .gallery {
@@ -93,11 +94,15 @@ body {
   a { display:block; padding:6px; background:#fff; }
   img { display:block; }
 }
+
 .lightBoxOverlay { height:100%; width:100%; background:rgba(0,0,0,0.8); position:fixed; top:0; left:0; z-index:9; display:none; cursor:pointer; }
 .lightBox { position:absolute; top:50%; left:50%; background:#fff; z-index:10; }
 .closeBox { position:absolute; top:-25px; right:0; color:#fff; font-size:25px; text-decoration:none; }
 .lightBox img { display:block; }
  
+/*************************************************************************
+ go from list to tabbed layout
+ ************************************************************************/
 
 @media only screen and (min-width: 480px)  {
 
@@ -118,6 +123,10 @@ nav li: last-child a {
 	margin-right: 0;
 }
 
+/*************************************************************************
+ go from single to multi-column layout
+ ************************************************************************/
+	
 	@media only screen and (min-width: 768px),
 			only screen and (min-width: 700px) and (orientation: landscape) {
 
@@ -126,7 +135,9 @@ nav li: last-child a {
 			width: 60%;
 		
 }
+				
 
+				
 nav a { 
 padding: 15px 1%; 
 
@@ -147,7 +158,9 @@ border {
 
 }
 
-/************************************************
+/*************************
+ end of Media Queries
+ *************************/
 
 
 /* #header #logo #logo-link:hover {
