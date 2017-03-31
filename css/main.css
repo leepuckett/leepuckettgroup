@@ -3,6 +3,9 @@ a:visited    { color: #660000; text-decoration: none }
 a:hover      { color: #003366; text-decoration: none }
 a:active     { color: #003300; text-decoration: none }
 
+html {
+	box-sizing: border-box;
+}
 
 h1 {
  background-color:#003356;
@@ -66,8 +69,6 @@ body {
  background-size:cover;
 }
 
-
-}
 #header #news {
  width: 756px;
  height: 70px;
@@ -81,6 +82,72 @@ body {
  width: 218px;
  display: block;
 }
+
+/*************************
+ Media Queries
+ *************************/
+@import "compass/css3";
+
+.gallery {
+  position:absolute; top:50%; left:50%; margin-left:-81px; margin-top:-50px;
+  a { display:block; padding:6px; background:#fff; }
+  img { display:block; }
+}
+.lightBoxOverlay { height:100%; width:100%; background:rgba(0,0,0,0.8); position:fixed; top:0; left:0; z-index:9; display:none; cursor:pointer; }
+.lightBox { position:absolute; top:50%; left:50%; background:#fff; z-index:10; }
+.closeBox { position:absolute; top:-25px; right:0; color:#fff; font-size:25px; text-decoration:none; }
+.lightBox img { display:block; }
+ 
+
+@media only screen and (min-width: 480px)  {
+
+	nav a{
+		float: left;
+		width: 30%;
+		margin: 0 0 0 5%;
+		padding: 25px 1%;
+		margin-bottom: 0;
+	}
+
+nav li: first-child a {
+	margin-left: 0;
+
+}
+
+nav li: last-child a {
+	margin-right: 0;
+}
+
+	@media only screen and (min-width: 768px),
+			only screen and (min-width: 700px) and (orientation: landscape) {
+
+.title {
+			float: right;
+			width: 60%;
+		
+}
+
+nav a { 
+padding: 15px 1%; 
+
+
+border {
+	padding: 15px 1%;
+
+}
+		
+
+
+	}
+
+
+
+@media only screen and (min-width: 1140px)  {
+
+
+}
+
+/************************************************
 
 
 /* #header #logo #logo-link:hover {
@@ -225,49 +292,7 @@ background-color: #000;
  text-align: center;
  width: 760px;
 }
-#resume, #int-english, #int-japanese, #gallery-thumbs {
- background-color:#FFFFE1;
- border: 0px solid #000000;
- height: 298px; 
- overflow: auto; 
- padding-bottom: 20px;
- padding-left: 10px;
- width: 750px; 
-}
-#gallery {
- /*background-image:url(../images/lincoln13.jpg);*/
- background-position: 0 45;
- background-repeat: no-repeat;
- font-size: 12px;
- height: 540px;
- margin-left: 10px;
- width: 500px;
-}
-#video {
- height: 386px;
- width: 747px;
-}
-#gallery-thumbs {
- background-color: #666;
- border: 1px solid #ccc;
- float: right;
- height: 475px;
- margin-right: 10px;
- padding: 5px;
- width: 210px;
-}
-#gallery-thumbs img {
- background-color: #fff;
- filter:alpha(opacity=60) progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/grey-bg-2.gif',sizingMethod='crop');
- opacity:.6;
- border: 2px solid #fff;
- margin: 2px;
-}
-#gallery-thumbs a:hover img {
- border: 2px solid #333366;
- filter:alpha(opacity=100) progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/grey-bg-2.gif',sizingMethod='crop');
- opacity:.99;
-}
+
 #caption {
  background-color: #666;
  border: 1px solid #ccc;
@@ -296,7 +321,7 @@ iframe {
  height:422px;
  width:750px;
 }
-/*------------------------------------------------------------------------------------ tnav -*/
+/*--------------------------------------------------------------------- tnav -*/
 #tnav {
  border-bottom: 2px solid #14233A;
  height:23px;
@@ -440,3 +465,4 @@ iframe {
 #tnav li.over ul {
  display:block !important;
 }
+
